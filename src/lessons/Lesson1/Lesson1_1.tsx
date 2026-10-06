@@ -6,7 +6,9 @@ const Lesson1_1 = () => {
   const [age, setAge] = useState<number>(0); // 0 is the initial value of age
 
   console.log("rendering!");
-  // 下のhandleClickが実行されると、再レンダリングされるので、
+  // 最初の実行する時にrenderingされて、何かの関数が実行されると、
+  // 再レンダリングされるので、console.log("rendering!")が再度実行されます。
+  // 下のhandleClick関数が実行されると、再レンダリングされるので、
   // console.log("rendering!")が再度実行されて、2回実行される。
 
   const handleClick = () => {
