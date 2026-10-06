@@ -5,6 +5,10 @@ import { useState } from "react";
 const Lesson1_1 = () => {
   const [age, setAge] = useState<number>(0); // 0 is the initial value of age
 
+  console.log("rendering!");
+  // 下のhandleClickが実行されると、再レンダリングされるので、
+  // console.log("rendering!")が再度実行されて、2回実行される。
+
   const handleClick = () => {
     setAge(age + 1); // この内部でageを更新されない。Reactが再レンダリングして、変数の値も更新される。
 
